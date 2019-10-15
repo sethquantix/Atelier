@@ -1,0 +1,31 @@
+version: "3.2"
+
+services:
+        db:
+                image: postgres:11
+                restart: always
+                environment:
+                        POSTGRES_DB: Catz
+                        POSTGRES_USER: postgres
+                        POSTGRES_PASSWORD: 240UAPsjgdyTETIj96BmLAIw256
+                networks:
+                        - workshop-cats
+                ports:
+                        - 5430:5432
+                volumes:
+                        - postgres_cats:/var/lib/postgres/data
+
+        adminer:
+                image: adminer-dark
+                restart: always
+                networks:
+                        - workshop-cats
+                ports:
+                        - 8081:8080
+
+volumes:
+        postgres_cats:
+
+networks:
+        workshop-cats:
+                driver: overlay 

@@ -1,0 +1,2 @@
+
+export {ICat} from "./ICat";

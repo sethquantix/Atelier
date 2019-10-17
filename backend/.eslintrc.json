@@ -1,0 +1,26 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "rules": {
+    // Additional, per-project rules...
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "modules": true
+    }
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "indent": ["warn", "tab"],
+    "quotes": ["warn", "double"],
+    "no-tabs": "off",
+    "require-jsdoc": "off"
+  }
+}

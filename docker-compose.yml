@@ -23,9 +23,16 @@ services:
                 ports:
                         - 8081:8080
 
-volumes:
-        postgres_cats:
+        backend:
+                image: backend
+                restart: always
+                networks:
+                        - workshop-cats
+                ports:
+                        - 7001:8444
+volumes: 
+    postgres_cats:
 
 networks:
-        workshop-cats:
-                driver: overlay 
+    workshop-cats:
+       driver: overlay

@@ -1,7 +1,7 @@
 
 import axios, {AxiosInstance} from "axios";
 
-const ep = process.env.NODE_ENV === "production" ? "api.atelier.seth-workshop.net" : "http://localhost:8444";
+const ep = process.env.NODE_ENV === "production" ? "https://api.atelier.seth-workshop.net" : "http://localhost:8444";
 
 class API {
 

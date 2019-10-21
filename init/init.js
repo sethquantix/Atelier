@@ -11,7 +11,7 @@ const pool = new Pool({
 })
 
 const readFile = promisify(fs.readFile);
-const query = 'INSERT INTO cats(uid, link) VALUES ($1, $2)';
+const query = 'INSERT INTO cats(id, link) VALUES ($1, $2)';
 
 readFile(process.argv[2], "utf-8").then(buf => {
 	let { images } = JSON.parse(buf);
